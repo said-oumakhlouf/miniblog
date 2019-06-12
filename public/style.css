@@ -1,0 +1,752 @@
+body
+{
+    font-family: "helvetica";
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
+    background:url('../images/neige.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* --- menu de navigation --- */
+
+header
+{
+    height: 90px;
+    background-color: #000000;
+}
+
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+    margin: 10px;
+}
+
+nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+    z-index: 3;
+}
+
+nav.black
+{
+    background-color: #12a5ce;
+    height: 40px;
+    padding: 10px 50px;
+}
+
+nav .logo{
+    float: left;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;}
+
+nav .logo li
+{
+    list-style: none;
+}
+
+nav .logo img{
+    height: 80px;
+    transition: .5s;
+}
+
+nav.black .logo img
+{
+    height:60px;
+}
+
+nav ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a {
+    line-height: 60px;
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+nav.black ul li a {
+    line-height: 10px;
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+    color: white;
+    background: #132226;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #040C0E;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: white;
+    background:#132226;
+    transition: .5s;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/* --- post --- */
+
+.post_container
+{
+    background-color: rgba(14, 43, 233, 0.26);
+    border-radius: 4px;
+    box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.75);
+    margin-top: 10px;
+    position: relative;
+}
+
+.post_container .header
+{
+    border-radius : 4px 4px 0px 0px;
+    background: -moz-linear-gradient(275deg, rgba(4,12,14,1) 0%, rgba(176,176,176,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(4,12,14,1)), color-stop(100%, rgba(176,176,176,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(275deg, rgba(4,12,14,1) 0%, rgba(176,176,176,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(275deg, rgba(4,12,14,1) 0%, rgba(176,176,176,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(275deg, rgba(4,12,14,1) 0%, rgba(176,176,176,1) 100%); /* ie10+ */
+    background: linear-gradient(175deg, rgba(4,12,14,1) 0%, rgba(176,176,176,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#040C0E', endColorstr='#B0B0B0',GradientType=0 ); /* ie6-9 */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.post_container .title
+{
+    margin: auto;
+    color: white;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    display: block;
+    width: 70%;
+    word-wrap: break-word;
+}
+
+.post_container .title a
+{
+    color: inherit;
+}
+
+.post_container .date_creation
+{
+    margin: auto;
+    margin-left:20px;
+    padding-left: 20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    display: block;
+    width: 30%;
+    color: white;
+}
+
+.post_container .far
+{
+    padding-right: 10px;
+}
+
+.post_container .content
+{
+    margin: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    display: block;
+    word-wrap: break-word;
+}
+
+.post_container .admin_edition
+{
+    float: right;
+    margin-right: 20px;
+}
+
+.post_container .admin_edition a
+{
+    margin-left: 10px;
+}
+
+.post_container .comment
+{
+    margin: auto;
+    padding-left: 20px;
+    padding-top: 10px;
+    display: block;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+.lastPost
+{
+    color: #383d41;
+    font-family: fantasy;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+/* --- changement de page --- */
+
+.page_navigation
+{
+    margin: auto;
+    margin-top: 10%;
+}
+
+/* --- commentaires --- */
+
+.comments
+{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    word-wrap: break-word;
+}
+
+.comments .comments_head
+{
+    background-color: #17a2b8;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: 3px solid #b3e5fc;
+}
+
+.comments .comments_head span .fa
+{
+    padding-right: 10px;
+}
+
+.comments .comments_head span
+{
+    margin-left: 20px;
+    padding-left: 20px;
+}
+.comments .comments_header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #b3e5fc;
+}
+
+.comments_header .author
+{
+    width: 70%;
+    margin:auto;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.comments_header .date
+{
+    width: 30%;
+    margin: auto;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.comments .far {
+    padding-right: 10px;
+}
+
+.comments_content
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #e1f5fe;
+    position: relative;
+}
+
+.comments_content p
+{
+    margin: auto;
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-right: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    width: 90%;
+}
+
+.comments_content form input[value="Supprimer"], input[value="Ignorer"]
+{
+    margin: 10px;
+}
+
+.comments_content input[value="Commentaire signalé"]
+{
+    text-decoration: none;
+    border: none;
+    position: absolute;
+    bottom:0px;
+    right:0px;
+}
+
+.comments_content input[value="Commentaire signalé"]:hover
+{
+    background-color:#ef9a9a;
+}
+
+
+/* --- formulaire de commentaire --- */
+
+.comment_form input
+{
+    border-radius : 4px 4px 4px 4px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.comment_form
+{
+    padding-top: 10px;
+    padding-bottom: 10%;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment_form textarea
+{
+    width: 100%;
+    border-radius : 4px 4px 4px 4px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    height: 80px;
+}
+
+/* --- admin --- */
+
+.admin_page
+{
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin
+{
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+}
+
+.admin p
+{
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.admin .form
+{
+    width: 70%;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    background-color: #f2f2f2;
+    border-color:#f2f2f2;
+    font-size: 16px;
+    color: grey;
+}
+
+[   value="LOGIN"]
+{
+    background-color: #4CAF50;
+    border-width: 1px;
+    border-color: #4CAF50;
+    border-style: solid;
+    color: white;
+    padding: 0px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 70%;
+    height:40px;
+}
+
+/* --- edition de post --- */
+
+.edit_page
+{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit
+{
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+}
+
+.edit p
+{
+    text-align: center;
+}
+
+[name="titlepost"], [name="titlePostEdit"]
+{
+    width: 40%;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    background-color: #f2f2f2;
+    border-color:#f2f2f2;
+    font-size: 16px;
+    color: black;
+}
+
+[value="Envoyer"]
+{
+    background-color: #4CAF50;
+    border-width: 0px;
+    border-color: #4CAF50;
+    border-style: solid;
+    color: white;
+    padding: 0px;
+    margin-top:10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 30%;
+    height: 40px;
+}
+
+/* --- vue d'ensemble --- */
+
+.global_page
+{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.global
+{
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+}
+
+.global p
+{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.cell-hyphens {
+    word-wrap: break-word;
+    max-width: 100px;
+    -webkit-hyphens: auto; /* iOS 4.2+ */
+    -moz-hyphens: auto; /* Firefox 5+ */
+    -ms-hyphens: auto; /* IE 10+ */
+    hyphens: auto;
+}
+
+.tg
+{
+    border-collapse: collapse;
+    margin: 5px;
+}
+
+
+.tg tr:hover
+{
+    background-color: #cce6ff;
+}
+
+.tg td
+{
+    font-family:Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width:1px;
+    overflow: hidden;
+    word-break: normal;
+    border: none;
+}
+
+.tg th
+{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+}
+
+.tg .tg-0lax
+{
+    text-align: left;
+    vertical-align: top;
+}
+
+h3
+{
+
+font-size: 0.9em;
+margin-bottom: 0px;
+}
+
+.news p
+{
+margin-top: 0px;
+}
+
+.news
+{
+    width: 70%;
+    margin-top: 30px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10%;
+    padding-top: 5%;
+}
+
+a
+{
+text-decoration: none;
+color: blue;
+}
+
+/* --- responsive --- */
+
+@media (max-width: 690px)
+{
+
+body
+{
+    background-color: rgb(218, 241, 247);
+}
+
+.post_container .far
+{
+    padding-right: 20px;
+}
+
+.post_container .header
+{
+    font-size: 15px;
+}
+
+.post_container .title
+{
+    padding-left: 0px;
+    width: 50%;
+}
+
+.post_container .content
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.news
+{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.comments .comments_head span
+{
+    padding-left: 0px;
+}
+
+.comments
+{
+    width: 90%;
+}
+.comments_header .author
+{
+    width: 50%;
+    padding-left: 0px;
+}
+
+.comments_header .date
+{
+    width: 50%;
+    padding-left: 0px;
+}
+
+.comments_content
+{
+    flex-direction: column;
+}
+
+.comments_content p
+{
+    width: 70%;
+}
+
+.comments_content form input[value="Supprimer"], input[value="Ignorer"] {
+    margin: 10px;
+    float: right;
+    margin-right: 20px;
+}
+
+.admin_page
+{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.global_page
+{
+    width: 95%;
+}
+.tg td
+{
+    font-size: 10px;
+}
+
+header
+{
+    height: 40px;
+}
+
+nav{
+    
+    height: 40px;
+    padding: 10px 50px;
+}
+nav.black
+{
+    
+    height: 40px;
+    padding: 10px 50px;
+}
+nav ul li a {
+    line-height: 10px;
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+nav.black ul li a {
+    line-height: 10px;
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.home
+{
+    display: none;
+}
+
+.dropdown:hover .dropdown-content
+{
+    display: none;
+}
+
+.edit_page
+{
+    width: 90%;
+}
+
+}
