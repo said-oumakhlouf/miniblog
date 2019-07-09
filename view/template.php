@@ -15,7 +15,7 @@
         <div class="logo">
             <ul>
                 <li><a href="index.php"><i class="fas fa-home"></i><span class="home"> Accueil</span></a></li>
-                <li><a href="index.php?action=listPosts&page=1"><i class="far fa-newspaper"></i><span class="home"></span>Articles</a></li>
+                <li><a href="index.php?action=listPosts&page=1"><i class="far fa-newspaper"></i><span class="home"> Articles</span></a></li>
             </ul>
         </div>
         <ul>

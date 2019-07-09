@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<?php $title = "Editer un post"; ?>
+<?php $title = "Editer un article"; ?>
 <?php ob_start(); ?>
 <div class="news">
     <?php

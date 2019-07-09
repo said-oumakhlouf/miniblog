@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <?php $title="Ajouter un post"; ?>
+    <?php $title="Ajouter un article"; ?>
     <?php ob_start(); ?>
 
     <script src='https://devpreview.tiny.cloud/demo/tinymce.min.js'></script>

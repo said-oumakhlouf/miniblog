@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <?php $title="Changer d'email'"; ?>
+    <?php $title="Changer d'email"; ?>
     <?php ob_start(); ?>
 
     <body>

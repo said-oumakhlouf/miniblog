@@ -2,7 +2,15 @@
 <html>
 <?php $title = "Billet simple pour l'Alaska"; ?>
 <?php ob_start(); ?>
-
+<div class="slider">
+    <div class="load"></div>
+    <div class="contenu">
+        <div class="principal">
+            <h1>Billet simple pour l'Alaska</h1>
+            <p>Le nouveau livre de Jean Forteroche</p>
+        </div>
+    </div>
+</div>
 
 <div class="lastPost">
     <h2>Les trois derniers Articles publiés :</h2>
