@@ -28,8 +28,17 @@
             </div>
             <div class="content">
                 <p>
-                    <?= substr($posts[$i]->content(), 0, 100) . '...'; ?>
-                    <a href="index.php?action=post&postId=<?= $posts[$i]->id(); ?>">Lire la suite</a>
+                    <?php if (strlen($posts[$i]->content()) > 100) 
+                    {
+                        echo (substr($posts[$i]->content(), 0, 100) . '...') ;?>
+                        <a href="index.php?action=post&postId=<?= $posts[$i]->id(); ?>">Lire la suite</a>
+                    <?php
+                    }
+                    else 
+                    {
+                        echo ($posts[$i]->content());
+                    };
+                    ?>
                 </p>
             </div>
             
